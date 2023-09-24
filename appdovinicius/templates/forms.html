@@ -1,0 +1,26 @@
+<h1> {{  action  }} Livros</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Titulo:</label>
+    <input name="title" value = "{{ livro.title }}">
+  </div>
+  
+  <div>
+    <label>Escritor:</label>
+    <input name="writer" value = "{{ livro.writer }}">
+  </div>
+
+  <div>
+    <label>Genero:</label>
+    <input name="genre" value = "{{ livro.genre }}">
+  </div>
+
+  <div>
+    <label>Data de lançamento:</label>
+    <input type="date" name="release_date" value = "{{ livro.release_date }}">
+  </div>
+
+  <input type="submit" value="Registrar"> 
+</form>

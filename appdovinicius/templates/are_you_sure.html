@@ -1,0 +1,7 @@
+vc tem certeza que deseja deletar o livro "{{livro.title}}"?
+
+<form method = "post">
+   {% csrf_token %}
+  <input type="submit" name="confirm" value="Sim">
+  <input type="submit" value="Nao">
+</form>

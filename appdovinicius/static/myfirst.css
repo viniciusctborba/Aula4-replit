@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+b{
+
+font-family: 'Open Sans', sans-serif;
+  
+}
+
+h4 {
+
+font-family: 'Roboto', sans-serif;
+  
+}
+
+h5{
+font-family: 'Lora', serif;
+
+  
+}
+
+h1{
+
+font-family: 'Crimson Text', serif;
+  
+}
+
+.imagem{
+  margin: 0;
+  background-color: #DBF9FC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

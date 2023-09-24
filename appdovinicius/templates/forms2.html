@@ -1,0 +1,26 @@
+<h1> {{  action  }} Hobbys</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Titulo:</label>
+    <input name="title" value = "{{ hobby.title }}">
+  </div>
+  
+  <div>
+    <label>Prioridade:</label>
+    <input name="priority" value = "{{ hobby.priority }}">
+  </div>
+
+  <div>
+    <label>frequencia:</label>
+    <input name="how_often" value = "{{ hobby.how_often }}">
+  </div>
+
+  <div>
+    <label>categoria:</label>
+    <input type="category" name="category" value = "{{ hobby.cathegory }}">
+  </div>
+
+  <input type="submit" value="Registrar"> 
+</form>

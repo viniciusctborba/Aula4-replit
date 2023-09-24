@@ -1,0 +1,96 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vinicius Coelho Tavares Borba</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+
+  
+</head>
+
+<body style="color:red;">
+  <div class="imagem">
+<h2> Vinicius Coelho Tavares Borba</h2>
+
+  <p style="text-align: justify;">
+    <u>Vinicius tem 20 anos</u>, esta cursando o segundo periodo de engenharia de produção na <b>PUC-Rio<b>. Passou a maior parte de sua vida no Rio De Janeiro, contudo ja morou na Nova Zelandia e em Nova York, ele fala, além  de português , <i>inglês e espanhol<i>. E seu filme preferido é <a <a href="https://en.wikipedia.org/wiki/Trainspotting_(film)" target="_blank">Trainspotting </a>
+  </p>
+
+      <h4>confira abaixo algumas curiosidades sobre o vinicius</h4>
+
+
+      <h5>Hobbies Preferidos:
+      <ul>
+    {%for hobby in hobby%}
+          <li>{{ hobby.title }} <a href="/hobby/update/{{ hobby.id }}">Atualizar</a> 
+          <a href="/hobby/delete/{{ livro.id }}">Remover</a></li>
+           {%endfor%}
+  </ul>
+        <a href="/hobby">Adicionar Hobby Novo</a>
+
+
+        <h3> Livros Preferidos:</h3>
+
+        <ol>
+          {%for livro in livros%}
+          <li>{{ livro.title }} 
+            <a href="/livros/update/{{ livro.id }}">Atualizar</a> 
+            <a href="/livros/delete/{{ livro.id }}">Remover</a> </li>
+           {%endfor%}
+ <a href="/livros">Adicionar Livro Novo</a>       
+
+
+  </ol>
+        <div class="imagem">
+        <div><img src="https://cdn.kobo.com/book-images/e919fc20-6c6b-4971-91ee-109e2624d76e/1200/1200/False/hamlet-prince-of-denmark-22.jpg" width="300"></div>
+        <div><img src="https://m.media-amazon.com/images/I/51Mu2CjzqtL._AC_UF1000,1000_QL80_.jpg" width="300"></div>
+          <div class="imagem">
+  </div><img src="https://m.media-amazon.com/images/I/81tNnqcHxlL._AC_UF1000,1000_QL80_.jpg" width="300"></div>
+        <div class="imagem">
+  <div><img src="https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788535933239/churchill.jpg" width="300"></div>
+  <div class="imagem">
+  <div><img src="https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg" width="300"></div>
+
+    <h1>Agora confira as cidades preferidas que o Vinicius visitou:</h1>
+
+    <table border=1>
+  <tr>
+    <th><b>Cidade</b></th>
+    <th><b>Pais</b></th>
+    <th><b>Continente</b></th>
+  </tr>
+      
+      {%for pais in pais%}
+      </tr><td>{{pais.cidade}}</td>
+      <td>{{pais.pais}}</td>
+      <td>{{pais.continente}}</td></tr>
+         {%endfor%}
+</table>
+
+
+
+    <div><img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/1200px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg" width="250">
+       <img src=" https://upload.wikimedia.org/wikipedia/commons/e/e4/Walking_up_Mount_Maunganui_09_%285645002843%29.jpg" width="150">
+       <img src=" https://upload.wikimedia.org/wikipedia/commons/1/1e/Puerto_Madero%2C_Buenos_Aires_%2840689219792%29_%28cropped%29.jpg" width="300">
+       <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg/900px-Palace_of_Westminster_from_the_dome_on_Methodist_Central_Hall_%28cropped%29.jpg" width="300">
+    <img src=" https://q5s9m2q9.rocketcdn.me/wp-content/uploads/praga-republica-checa.jpg" width="200">
+    </div>
